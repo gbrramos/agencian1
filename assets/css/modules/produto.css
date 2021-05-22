@@ -1,0 +1,10 @@
+#section.produto h2{
+    width: fit-content;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 50px;
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--dark-blue);
+    
+}

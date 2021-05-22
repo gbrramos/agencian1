@@ -1,12 +1,15 @@
-/* Base */
-/* Arquivos de base para organização */
-@import url(./base/links.css);
-@import url(./base/variables.css);
-@import url(./base/main.css);
-
 /* Modules */
 /* Estilização Geral */
 @import url(./modules/nav.css);
 @import url(./modules/header.css);
 @import url(./modules/conteudo.css);
 @import url(./modules/icons.css);
+@import url(./modules/menu-lateral.css);
+@import url(./modules/cards.css);
+@import url(./modules/destaque.css);
+@import url(./modules/produto.css);
+/* Base */
+/* Arquivos de base para organização */
+@import url(./base/links.css);
+@import url(./base/variables.css);
+@import url(./base/main.css);

@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>N1 RUSH</title>
 </head>
 
 <body>
-    <div id="tudo">
+    <div class="tudo">
         <header>
             <div class="controle flex-container">
                 <nav id="nav" class="flex-item" data-alvo="nav#menu">
@@ -51,14 +52,92 @@
         <div class="clear"></div>
         <div id="conteudo">
             <div id="banner">
-                <img src="./assets/img/principal_banner_desktop.jpg" alt="">
+                <div class="menu-lateral">
+                    <div class="nome-game">
+                        <span>MORTAL KOMBAT</span>
+                    </div>
+                    <div class="slide-info">
+                        <div class="dots">
+                            <span id="current">1</span>
+                            <span>/</span>
+                            <span id="last">2</span>
+                        </div>
+                        <div class="arrows"></div>
+                    </div>
+                </div>
+                <div class="track-slide">
+                    <div class="slide_banner">
+                        <img src="./assets/img/principal_banner_desktop.jpg" alt="">
+                        <div class="text">
+                            <h2>MORTAL KOMBAT</h2>
+                            <h1>R$ 299<small>,99</small></h1>
+                            <p class="paragraph">Mortal Kombat X combina uma apresentação cinemática única com uma
+                                jogabilidade totalmente nova. Os jogadores podem escolher pela primeira vez diversas
+                                variantes de cada personagem, afetando tanto a estratégia como o estilo de luta.</p>
+                        </div>
+
+                    </div>
+                    <div class="slide_banner">
+                        <img src="./assets/img/principal_banner_desktop.jpg" alt="">
+                        <div class="text">
+                            <h2>MORTAL KOMBAT</h2>
+                            <h1>R$ 299<small>,99</small></h1>
+                            <p class="paragraph">Mortal Kombat X combina uma apresentação cinemática única com uma
+                                jogabilidade totalmente nova. Os jogadores podem escolher pela primeira vez diversas
+                                variantes de cada personagem, afetando tanto a estratégia como o estilo de luta.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <section id="destaques">
+                    <div class="cards">
+                        <div class="card card-game">
+                            <img src="./assets/img/zelda_banner.jpg" alt="">
+                            <p>The Legend of Zelda - Breath of th wild </p>
+                        </div>
+                        <div class="card card-game">
+                            <img src="./assets/img/sekiro_banner.jpg" alt="">
+                            <p>SEKIRO - Shadows die twice </p>
+                        </div>
+                    </div>
+                </section>
+                <div class="controle">
+                    <div id="section" class="produto">
+                        <img src="./assets/img/square.svg" alt="">
+                        <h2>Produtos em destaque</h2>
+                    </div>
+                </div>
             </div>
         </div>
+
         <div class="clear"></div>
         <footer>
-
         </footer>
     </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.track-slide').slick({
+            appendArrows: $('.arrows'),
+            prevArrow: '<div class="arrow arrow-prev" style="display: inline-block"><img src="./assets/img/angle-left-solid.svg"></div>',
+            nextArrow: '<div class="arrow arrow-next" style="display: inline-block"><img src="./assets/img/angle-right-solid.svg"></div>',
+        });
+
+        $(".track-slide").on('load init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            var slidesToShow = slick.slickGetOption('slidesToShow');
+            var curPage = parseInt((i - 1) / slidesToShow) + 1;
+            var lastPage = parseInt((slick.slideCount - 1) / slidesToShow) + 1;
+            $('#current').text(curPage);
+            $('#last').text(lastPage);
+        });
+
+        $('#nav').click(function (e) {
+            e.preventDefault();
+            $('#nav').toggleClass('open');
+        });
+    </script>
 </body>
 
 </html>

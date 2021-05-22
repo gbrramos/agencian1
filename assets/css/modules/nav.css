@@ -19,6 +19,15 @@
     transition: .25s ease-in-out;
 }
 
+#nav span:last-child{
+    width: 65%;
+}
+
+#nav.open span:last-child{
+    width: 50%;
+}
+
+
 #nav span:nth-child(even) {
     left: 50%;
     border-radius: 0 20px 20px 0;
@@ -42,5 +51,49 @@
 #nav span:nth-child(5) {
     top: 23px;
     border-radius: 20px;
+}
+
+#nav-icon2.open span:nth-child(1),
+#nav-icon2.open span:nth-child(6) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#nav.open span:nth-child(2),
+#nav-icon2.open span:nth-child(5) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#nav.open span:nth-child(1) {
+    left: 1px;
+    top: 7px;
+    transform: rotate(45deg);
+}
+
+#nav.open span:nth-child(2) {
+    left: calc(50% - 5px);
+    top: 7px;
+}
+
+#nav.open span:nth-child(3) {
+    left: -50%;
+    opacity: 0;
+}
+
+#nav.open span:nth-child(4) {
+    left: 10px;
+    top: 17px;
+    transform: rotate(45deg);
+}
+
+#nav.open span:nth-child(5) {
+    left: 0px;
+    top: 17px;
+    transform: rotate(-45deg);
 }
 

@@ -2,6 +2,7 @@ header {
     position: absolute;
     width: 100%;
     padding: 50px 0;
+    z-index: 4;
 }
 
 header .logo {
@@ -10,34 +11,48 @@ header .logo {
 
 .menu-right li{
     display: inline-block;
-    padding: 0 40px;
-    text-align: right;
+    text-align: left;
+    padding: 10px 0;
     position: relative;
+    margin-right: -5px;
     border-left: 1px solid #fff;
 }
 
-
-
-
 .menu-right li:first-child{
     border-left: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.menu-right li:last-child{
+    border-radius: 0 10px 10px 0;
 }
 
 .menu-right img {
     vertical-align: middle;
-    filter: invert(1) sepia(0) saturate(0);
+    filter: invert(1);
     margin-right: 10px;
 }
 .menu-right li a{
     color: #fff;
     text-decoration: none;
+    padding: 20px 40px;
     vertical-align: top;
     font-size: 14px;
 }
 
 .menu-right li:hover{
     background-color: #fff;
+    transition: 0.3s all linear;
 }
+
+.menu-right li:hover a{
+    color: #000;
+}
+
+.menu-right li:hover img{
+    filter: invert(0);
+}
+
 
 .menu-right span{
     vertical-align: middle;

@@ -1,0 +1,38 @@
+.cards{
+    text-align: center;
+}
+
+.card{
+    max-width: fit-content;
+    display: inline-block;
+    margin: 0 20px;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+   
+}
+
+.card img{
+    width: 100%;
+}
+
+div.card>p{
+    background-color: var(--blue);
+    text-align: left;
+    padding: 10px 0 10px 10px;
+    margin-top: -5px;
+    font-size: 16px;
+    color: var(--dark-blue);
+    font-weight: bold;
+    border-left: 10px solid var(--dark-blue);
+    position: relative;
+}
+
+div.card>p:after{
+    position: absolute;
+    width: calc(100% - 380px);
+    height: 1px;
+    right: 40px;
+    top: 50%;
+    content: '';
+    background-color: var(--dark-blue);
+}

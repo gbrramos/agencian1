@@ -1,0 +1,64 @@
+.menu-lateral{
+    height: 400px;
+    position: absolute;
+    right: 0;
+    top: 15%;
+    width: 60px;
+    background-color: var(--blue);
+    z-index: 6;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 0 0 0 10px;
+    overflow: hidden;
+}
+
+.nome-game span{
+    writing-mode: tb;
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+}
+
+.nome-game span::after{
+    position: absolute;
+    height: calc(220px - 100%);
+    width: 1px;
+    background-color: #fff;
+    content: '';
+    top: calc(100% + 50px);
+    left: 55%;
+    z-index: 2;
+}
+
+.slide-info{
+    background: var(--dark-blue);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    padding: 10px 0 ;
+}
+
+.dots{
+    padding: 10px;
+    font-size: 12px;
+}
+
+.dots span{
+    color: #fff;
+}
+
+.arrows{
+}
+
+.arrows .arrow{
+    width: 45%;
+    height: 20px;
+    margin-top: 10px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.arrow img{
+    display: inline-block;
+}

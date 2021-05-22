@@ -22,7 +22,7 @@ body {
     position: relative;
 }
 
-#tudo p {
+.tudo p {
     line-height: 2em;
     font-size: 1.2em;
     font-family: var(--font);
@@ -48,6 +48,10 @@ body {
     color: var(--text-color);
 }
 
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--font);
+    font-weight: 300;
+}
 
 section {
     float: left;
@@ -59,16 +63,16 @@ section {
     clear: both;
 }
 
-.flex-container{
+.flex-container {
     display: flex;
 }
 
-.flex-item{
+.flex-item {
     flex-direction: row;
     justify-content: flex-start;
 }
 
-.flex-item.end{
+.flex-item.end {
     margin-left: auto;
 }
 
@@ -82,4 +86,35 @@ section {
     #conteudo {
         padding-bottom: 250px;
     }
+}
+
+.arrow img{
+    position: absolute;
+    z-index: 5;
+    filter: invert(1);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    opacity: 0;
+    transition: all linear 0.2s;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--blue);
+    opacity: 1;
+    transition: 1s all linear;
+    border-radius: 20px;
 }
