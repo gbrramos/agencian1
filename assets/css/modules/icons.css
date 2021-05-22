@@ -1,0 +1,11 @@
+.radius{
+    border-radius: 100%;
+}
+
+.blue{
+    background-color: var(--blue);
+}
+
+.menu-right .radius.blue{
+    padding: 5px 10px;
+}
