@@ -8,14 +8,26 @@
     margin: 0 20px;
     border-radius: 0 0 10px 10px;
     overflow: hidden;
-   
+    transition: 0.3s all linear;
+
 }
 
 .card img{
     width: 100%;
 }
 
-div.card>p{
+.card a{
+    text-decoration: none;
+}
+
+.card:hover{
+    transform: translate(0px, -20px);
+    transition: 0.3s all linear;
+    box-shadow: 0px 10px 20px #000;
+}
+
+
+div.card a>p{
     background-color: var(--blue);
     text-align: left;
     padding: 10px 0 10px 10px;
