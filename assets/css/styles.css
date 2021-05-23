@@ -8,6 +8,8 @@
 @import url(./modules/cards.css);
 @import url(./modules/destaque.css);
 @import url(./modules/produto.css);
+@import url(./modules/footer.css);
+
 /* Base */
 /* Arquivos de base para organização */
 @import url(./base/links.css);

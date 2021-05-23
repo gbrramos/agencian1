@@ -1,0 +1,37 @@
+footer{
+    position: relative;
+    width: 100%;
+}
+
+.footer{
+    height: 40px;
+    display: inline-block;
+}
+
+.footer img{
+    float: right;
+    margin-right: 10px;
+    margin-top: 7px;
+    width: 40px;
+    height: 30px;
+}
+
+.footer p#footer{
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    margin-left: 35px;
+    margin-top: 7px;
+}
+
+.light-blue{
+    width: 70%;
+    background: var(--blue);
+    float: right;
+}
+
+.dark-blue{
+    width: 30%;
+    background: var(--dark-blue);
+    float: left;
+}

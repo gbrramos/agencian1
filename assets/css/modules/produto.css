@@ -16,3 +16,50 @@
 .container-img{
     border-bottom: 2px solid var(--blue);
 }
+
+.produto div.container-img img{
+    max-width: 100%;
+    margin-bottom: 16px;
+}
+
+#produtos-destaque{
+    margin-top: 100px;
+}
+
+.produto .infos{
+    margin: 20px 0 20px 0;
+}
+
+.produto .infos .name{
+    font-size: 14px;
+    color: var(--dark-blue);
+    display: block;
+    width: 90%;
+    height: 40px;
+    font-weight: 400;
+}
+
+.produto .infos .price{
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--dark-blue);
+}
+
+a.btn.btn-buy{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 50px;
+    text-align: center;
+    background: var(--blue);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a.btn.btn-buy:hover{
+    transition: 0.3s all linear;
+    background: var(--dark-blue);
+    
+}
