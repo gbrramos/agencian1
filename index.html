@@ -12,15 +12,55 @@
 
 <body>
     <div class="tudo">
+        <div id="swal">
+            <div class="card card-swal">
+                <a href="#" id="times"><img src="./assets/img/close_btn.svg" alt=""></a>
+                <div class="text">
+                    <h2>Pedido realizado com sucesso!</h2>
+                </div>
+                <img src="./assets/img/mario-big.png" alt="">
+            </div>
+        </div>
         <header>
             <div class="controle flex-container">
-                <nav id="nav" class="flex-item" data-alvo="nav#menu">
+                <div id="nav" class="flex-item" data-alvo="nav#menu">
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
+
+                </div>
+
+                <nav id="menu">
+                    <div class="lista-3">
+                        <ul>
+                            <li>Luta</li>
+                            <li><a href="">Mortal Kombat</a></li>
+                            <li><a href="">Smash Bros</a></li>
+                            <li><a href="">Killer Instinct</a></li>
+                            <li><a href="">DBZ Katrakot</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="lista-3">
+                        <ul>
+                            <li>Ação / Aventura</li>
+                            <li><a href="">GTA V</a></li>
+                            <li><a href="">Tomb Raider</a></li>
+                            <li><a href="">HALO</a></li>
+                            <li><a href="">Call of Duty</a></li>
+                        </ul>
+                    </div>
+                    <div class="lista-3">
+                        <ul>
+                            <li>Corrida</li>
+                            <li><a href="">Need for Speed</a></li>
+                            <li><a href="">Forza Horizon</a></li>
+                        </ul>
+                    </div>
                 </nav>
+
                 <div class="logo flex-item">
                     <img src="./assets/img/logo_n1.png" alt="">
                 </div>
@@ -90,7 +130,7 @@
 
                     </div>
                 </div>
-                
+
             </div>
             <section id="destaques">
                 <div class="cards">
@@ -123,7 +163,7 @@
                             <p class="name">Outriders</p>
                             <p class="price">R$ 200,00</p>
                         </div>
-                        <a href="#" class="btn btn-buy">Comprar</a>
+                        <a href="#" class="btn btn-buy disable">Comprar</a>
                     </div>
                     <div class="produto">
                         <div class="container-img">
@@ -133,7 +173,7 @@
                             <p class="name">CYBERPUNK 2077</p>
                             <p class="price">R$ 200,00</p>
                         </div>
-                        <a href="#" class="btn btn-buy">Comprar</a>
+                        <a href="#" class="btn btn-buy disable">Comprar</a>
                     </div>
                     <div class="produto">
                         <div class="container-img">
@@ -144,7 +184,7 @@
                                 Freeze</p>
                             <p class="price">R$ 200,00</p>
                         </div>
-                        <a href="#" class="btn btn-buy">Comprar</a>
+                        <a href="#" class="btn btn-buy disable">Comprar</a>
                     </div>
                 </div>
             </div>
@@ -165,6 +205,9 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
         $('.track-slide').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            infinite: true,
             appendArrows: $('.arrows'),
             prevArrow: '<div class="arrow arrow-prev" style="display: inline-block"><img src="./assets/img/angle-left-solid.svg"></div>',
             nextArrow: '<div class="arrow arrow-next" style="display: inline-block"><img src="./assets/img/angle-right-solid.svg"></div>',
@@ -177,25 +220,41 @@
             var lastPage = parseInt((slick.slideCount - 1) / slidesToShow) + 1;
             $('#current').text(curPage);
             $('#last').text(lastPage);
+            var target = $('.slick-current h2').text();
+            $('.nome-game span').html(target);
         });
 
         $('#nav').click(function (e) {
             e.preventDefault();
             $('#nav').toggleClass('open');
+            $('nav#menu').toggleClass('active');
         });
 
-        $('.arrow').click(function(e){
+        $('.arrow').click(function (e) {
             var target = $('.slick-current h2').text();
             $('.nome-game span').html(target);
         });
-       
+
         $('#produtos-destaque').slick({
             infinite: true,
             slidesToShow: 3,
             slidesToScroll: 3
-          });
+        });
+
+        $('.disable').click(function (e) {
+            e.preventDefault();
+            $(this).removeClass('disable');
+            $(this).addClass('bought');
+            $(this).text('COMPRADO!');
+            $('#swal').addClass('active');
+        });
+
+        $('#times').click(function(e){
+            e.preventDefault();
+            $('#swal').removeClass('active');
+        })
     </script>
-   
+
 </body>
 
 </html>

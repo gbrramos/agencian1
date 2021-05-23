@@ -1,33 +1,34 @@
+/* Cards Destaque */
+
 .cards{
     text-align: center;
 }
 
-.card{
+.cards .card{
     max-width: fit-content;
     display: inline-block;
     margin: 0 20px;
     border-radius: 0 0 10px 10px;
     overflow: hidden;
     transition: 0.3s all linear;
-
 }
 
-.card img{
+.cards .card img{
     width: 100%;
 }
 
-.card a{
+.cards .card a{
     text-decoration: none;
 }
 
-.card:hover{
+.cards .card:hover{
     transform: translate(0px, -20px);
     transition: 0.3s all linear;
     box-shadow: 0px 10px 20px #000;
 }
 
 
-div.card a>p{
+.cards div.card a>p{
     background-color: var(--blue);
     text-align: left;
     padding: 10px 0 10px 10px;
@@ -47,4 +48,51 @@ div.card>p:after{
     top: 50%;
     content: '';
     background-color: var(--dark-blue);
+}
+
+/* Card Swall */
+
+.card.card-swal{
+    background: #fff;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+
+.card.card-swal a{
+    float: right;
+    width: fit-content;
+    text-align: right;
+    padding: 10px 10px 0 0;
+}
+
+.card.card-swal .text{
+    width: 360px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.card.card-swal .text h2{
+    background: #fff;
+    font-size: 30px;
+    width: 260px;
+    display: inline-block;
+    color: var(--dark-blue);
+    position: relative;
+    z-index: 2;
+}
+
+.card.card-swal:after{
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: var(--dark-blue);
+    left: 0;
+    top: 135px;
+    z-index: 1;
+    content: '';
+}
+
+.card.card-swal>img{
+    margin-bottom: -4px;
 }

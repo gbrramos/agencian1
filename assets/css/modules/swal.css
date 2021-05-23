@@ -1,0 +1,16 @@
+#swal {
+    height: 100vh;
+    width: 100vw;
+    background: #08415470;
+    position: fixed;
+    z-index: 99999;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#swal.active {
+    display: flex;
+    transition: 1s all linear;
+}
