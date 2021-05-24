@@ -1,5 +1,21 @@
 #destaques{
-    margin-top: -10vh;
+    margin-top: -5vh;
     z-index: 9;
     position: relative;
+}
+
+@media (max-width: 768px) {
+    #destaques{
+        margin-top: 0;
+    }
+
+    #section.produto h2{
+        font-size: 18px !important;
+        vertical-align: super;
+        margin-top: 60px !important;
+    }
+
+    #produtos-destaque {
+        margin-top: 0 !important;
+    }
 }

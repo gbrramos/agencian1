@@ -4,7 +4,7 @@ footer{
 }
 
 .footer{
-    height: 40px;
+    height: 41px;
     display: inline-block;
 }
 
@@ -34,4 +34,14 @@ footer{
     width: 30%;
     background: var(--dark-blue);
     float: left;
+}
+
+@media (max-width: 768px){
+    .footer p#footer{
+        height: 33px;
+    }
+    
+    footer{
+        
+    }
 }

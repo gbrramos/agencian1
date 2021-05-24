@@ -1,4 +1,4 @@
-.menu-lateral{
+.menu-lateral {
     height: 400px;
     position: absolute;
     right: 0;
@@ -12,14 +12,14 @@
     overflow: hidden;
 }
 
-.nome-game span{
+.nome-game span {
     writing-mode: tb;
     position: relative;
     color: #fff;
     font-size: 14px;
 }
 
-.nome-game span::after{
+.nome-game span::after {
     position: absolute;
     height: calc(220px - 100%);
     width: 1px;
@@ -30,28 +30,27 @@
     z-index: 2;
 }
 
-.slide-info{
+.slide-info {
     background: var(--dark-blue);
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 90px;
-    padding: 10px 0 ;
+    padding: 10px 0;
 }
 
-.dots{
+.dots {
     padding: 10px;
     font-size: 12px;
 }
 
-.dots span{
+.dots span {
     color: #fff;
 }
 
-.arrows{
-}
+.arrows {}
 
-.arrows .arrow{
+.arrows .arrow {
     width: 45%;
     height: 20px;
     margin-top: 10px;
@@ -59,6 +58,66 @@
     padding-left: 10px;
 }
 
-.arrow img{
+.arrow img {
     display: inline-block;
+}
+
+@media (max-width: 768px) {
+    #banner {
+        height: 500px;
+        position: relative;
+    }
+
+    .arrows {
+        float: right;
+        margin-right: 20px;
+        margin-top: 5px;
+    }
+
+    .dots{
+        padding: 22px 0 0 0;
+        width: 30%;
+        font-size: 12px;
+        display: inline-block;
+    }
+
+    .nome-game {
+        width: fit-content;
+        margin-top: -10px;
+        margin-left: 20px;
+    }
+
+    .nome-game span {
+        writing-mode: horizontal-tb;
+        margin-left: 10px;
+    }
+
+    .menu-lateral {
+        height: 40px;
+        position: absolute;
+        left: 0;
+        bottom: 5px;
+        width: 100%;
+        z-index: 99999;
+        top: inherit;
+    }
+
+    .slide-info {
+        background: var(--dark-blue);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 40%;
+        height: 90px;
+        padding: 40px 0 0 0;
+        z-index: 9999;
+        display: block;
+    }
+
+    .arrows .arrow {
+        width: 25%;
+        height: 20px;
+        margin-top: 15px;
+        padding-right: 10px;
+    }
 }

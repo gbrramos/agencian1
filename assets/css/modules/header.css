@@ -5,11 +5,12 @@ header {
     z-index: 4;
 }
 
+
 header .logo {
     margin-left: 50px;
 }
 
-.menu-right li{
+.menu-right li {
     display: inline-block;
     text-align: left;
     padding: 10px 0;
@@ -18,12 +19,12 @@ header .logo {
     border-left: 1px solid #fff;
 }
 
-.menu-right li:first-child{
+.menu-right li:first-child {
     border-left: 0;
     border-radius: 10px 0 0 10px;
 }
 
-.menu-right li:last-child{
+.menu-right li:last-child {
     border-radius: 0 10px 10px 0;
 }
 
@@ -32,7 +33,8 @@ header .logo {
     filter: invert(1);
     margin-right: 10px;
 }
-.menu-right li a{
+
+.menu-right li a {
     color: #fff;
     text-decoration: none;
     padding: 20px 40px;
@@ -40,20 +42,61 @@ header .logo {
     font-size: 14px;
 }
 
-.menu-right li:hover{
+.menu-right li:hover {
     background-color: #fff;
     transition: 0.3s all linear;
 }
 
-.menu-right li:hover a{
+.menu-right li:hover a {
     color: #000;
 }
 
-.menu-right li:hover img{
+.menu-right li:hover img {
     filter: invert(0);
 }
 
 
-.menu-right span{
+.menu-right span {
     vertical-align: middle;
+}
+
+
+
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    header .logo {
+        margin-left: 20px;
+        width: 130px;
+        margin-top: 3px;
+    }
+
+    .menu-right li a {
+        padding: 5px;
+    }
+
+    .menu-right li {
+        border: 0;
+    }
+
+    .menu-right li:not(:last-child) span {
+        display: none;
+    }
+
+    .menu-right .radius.blue {
+        padding: 3px 7px !important;
+        position: absolute;
+        left: 20px;
+        top: 15px;
+    }
+
+    
+
+    .flex-item.end {
+        margin-left: 20px !important;
+        margin-top: -10px;
+    }
 }

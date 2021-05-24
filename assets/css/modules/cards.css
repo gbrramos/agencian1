@@ -11,6 +11,7 @@
     border-radius: 0 0 10px 10px;
     overflow: hidden;
     transition: 0.3s all linear;
+    width: 40%;
 }
 
 .cards .card img{
@@ -53,7 +54,7 @@ div.card>p:after{
 /* Card Swall */
 
 .card.card-swal{
-    background: #fff;
+    background: #ffffff;
     text-align: center;
     border-radius: 5px;
     position: relative;
@@ -95,4 +96,13 @@ div.card>p:after{
 
 .card.card-swal>img{
     margin-bottom: -4px;
+}
+
+@media (max-width: 768px){
+    .cards .card{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    
 }
