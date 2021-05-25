@@ -7,6 +7,7 @@
 @media (max-width: 768px) {
     #destaques{
         margin-top: 0;
+        z-index: 2;
     }
 
     #section.produto h2{

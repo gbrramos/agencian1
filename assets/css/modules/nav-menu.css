@@ -71,5 +71,28 @@ nav#menu .lista-3 {
         z-index: 999;
         display: block;
         width: 110vw;
+        padding: 60px 70px;
+        top: 0;
+        border: 0;
+        box-shadow: 0;
     }
+
+    nav#menu .lista-3{
+        padding: 20px 0;
+        width: 100%;
+        border-bottom: 1px solid var(--dark-blue-2) !important;
+    }
+
+    nav#menu .lista-3:last-child{
+        border-bottom: 0 !important;
+    }
+
+    nav#menu:after {
+        display: none;
+    }
+
+    .lista-3 li a{
+        font-size: 18px;
+    }
+
 }

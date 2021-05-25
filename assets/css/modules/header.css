@@ -93,6 +93,9 @@ header .logo {
         top: 15px;
     }
 
+    .flex-item{
+        z-index: 99999999;
+    }
     
 
     .flex-item.end {

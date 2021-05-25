@@ -233,7 +233,14 @@
             $('.nome-game span').html(target);
         });
 
-        
+        var largura = $(window).width();
+        if (largura >= 768){
+            $('#produtos-destaque').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 3
+            });
+        }
 
         $('#produtos-destaque').slick({
             infinite: true,
@@ -255,14 +262,7 @@
             $('#swal').removeClass('active');
         });
 
-        var largura = $(window).width();
-        if (largura >= 768){
-            $('#produtos-destaque').slick({
-                infinite: true,
-                slidesToShow: 3,
-                slidesToScroll: 3
-            });
-        }
+        
     </script>
 
 </body>
