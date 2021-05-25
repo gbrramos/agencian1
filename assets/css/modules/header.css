@@ -66,6 +66,7 @@ header .logo {
 @media (max-width: 768px) {
     header {
         padding: 10px 15px;
+        position: fixed;
     }
 
     header .logo {
